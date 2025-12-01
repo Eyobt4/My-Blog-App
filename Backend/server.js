@@ -1,9 +1,12 @@
 import express  from "express";
 import router from "./Routes/userRouter.js" ;
 import Db_connection from "./Config/db_config.js";
+import dotenv from "dotenv";
+
 const app = express();
 const port = 5001;
 
+dotenv.config();
 Db_connection();
 app.use(express.json());
 console.log("hear");

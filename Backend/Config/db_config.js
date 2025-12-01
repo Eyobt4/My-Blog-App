@@ -1,8 +1,9 @@
 import mongoose from "mongoose" ;
+// import CONNECTION_STRING from "../Config/.env"
 
 const Db_connection = async()=> {
   try {
-      await mongoose.connect("mongodb+srv://eyobtesfaye838:eyob838@auth-cluster.cffb4ie.mongodb.net/?appName=auth-cluster");
+      await mongoose.connect(process.env.CONNECTION_STRING);
     console.log("Db connected")
   }    
   catch (error) {
